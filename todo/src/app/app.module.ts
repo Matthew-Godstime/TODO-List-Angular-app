@@ -9,7 +9,7 @@ import { SubTasksComponent } from './sub-tasks/sub-tasks.component';
 
 const routes: Routes = [
   { path: 'tasks', component: TasksComponent },
-  { path: 'sub-task/:id', component: SubTasksComponent },
+  { path: 'sub-task', component: SubTasksComponent },
   { path: '', redirectTo: '/tasks', pathMatch: 'full' },
 ];
 
