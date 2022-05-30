@@ -1,0 +1,14 @@
+<h1> {{ title }}</h1>
+<div class="grid">
+    <div class="row row-cols-2">
+        <div class="col">
+            <h2>Weeks: {{ ts.weekCounter }}</h2>
+            <q><i>60 sec makes a week</i></q>
+        </div>
+        <div class="col">
+            <h2>Day: {{ ts.dayCounter }}</h2>
+            <q><i>20 sec makes a day</i></q>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

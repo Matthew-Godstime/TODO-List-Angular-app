@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row row-cols-2">
+        <div class="col"><div class="mb-3 size left">
+            <label for="formGroupExampleInput" class="form-label size">Enter Tasks</label>
+            <input type="text" class="form-control size" id="formGroupExampleInput" placeholder="Tasks" value=""
+                [(ngModel)]="task">
+        
+            <label for="weeks" class="size"> Day(s)</label>
+            <input type="number" name="number" id="number" class="form-control size" id="formGroupExampleInput"
+                [(ngModel)]="weeks">
+        
+            <button type="button" class="btn btn-outline-danger" (click)="gotoTasksList()">Back</button>
+            <button type="button" class="btn btn-primary" (click)="saveTasks() ">Add</button>
+        </div>
+    </div>
+        <div class="col"><h1>Sub-Tasks</h1>
+        <div class="tasks-list size l">
+            <div>
+                <div *ngIf="getAllSubTasks()">
+                    <div class="tasks" *ngFor="let task of subListTask" [style.opacity]="task.checked ? '0.5' : ''">
+                        <div>
+                            <input *ngIf="ts.dayCounter < task.week && (task.checked || !task.checked)" type="checkbox"
+                                name="task" id="check" (change)="task.checked=true">
+                            <div *ngIf="(ts.dayCounter <= task.week || ts.dayCounter > task.week) && task.checked">
+                                <p style="color: green;">Congratulations</p>
+                            </div>
+                        </div>
+                        <p id="display" class="info">
+                            <span class="task-id">No: {{ task.id}}</span>
+                            <span class="task">Task: {{ task.task }}</span>
+                            <span>Day(s): {{ task.week }}</span>
+                        </p>
+                        <div *ngIf="ts.dayCounter >= task.week && !task.checked">
+                            <p style="color: red;">Sorry, Better Luck Next Time</p>
+                        </div>
+                        <br>
+                        <br>
+                        <span style=" display: block; border: 2px blue solid;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>

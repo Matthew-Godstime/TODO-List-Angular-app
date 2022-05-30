@@ -1,0 +1,14 @@
+h2 {
+    border: none;
+}
+span {
+    display: block;
+    border-bottom: 2px rgb(145, 142, 142) dotted;
+    width: 30%;
+    margin: 1em auto;
+}
+
+q {
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+#display {
+    color: black;
+    display: block;
+    font-size: 1.2rem;
+    background-color: lightblue;
+    margin: .5rem .5rem .5rem 0;
+    padding: .5rem 0;
+    border-radius: 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.info span {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
