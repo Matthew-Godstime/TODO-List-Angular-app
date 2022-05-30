@@ -9,22 +9,6 @@ export class TimerService {
   dayCounter: number = 0;
   constructor() { }
 
-  // startTimer(timeLeft: number, checked: boolean) {
-  //   this.weekCounter = timeLeft;
-  //   let timmer = setInterval(() => {
-  //     if (this.weekCounter !== 0) {
-  //       this.weekCounter--;
-  //       if (checked) {
-  //         this.message = "WOW, Congratulations";
-  //         clearInterval(timmer)
-  //       }
-  //     } else {
-  //       this.message = "Sorry, You'll have better luck next time"
-  //       clearInterval(timmer);
-  //     }
-  //   }, 1000)
-  // }
-
   dayCount() {
     setInterval(() => {
       this.dayCounter++;
